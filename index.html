@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+https://www.w3schools.com/howto/howto_css_two_columns.asp
+https://stackoverflow.com/questions/20603283/how-can-i-get-the-background-image-in-full-screen
+   >
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" -->
+    <title>EasyLanCraft! By: @jamaglian</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+      <div class="container">
+        <div class="item">
+          <center>
+            <h1>EASYLANCRAFT!</h1>
+            <div class="row">
+              <div class="column" >
+                <h2>O QUE FAZER ?</h2>
+                <p>Inicie seu servidor lan e preencha a porta em que foi aberto ou inicie um servidor dedicado e preencha a porta configurada abaixo</p>
+              </div>
+              <div class="column" style="float: right;">
+                <h2>IMPORTANTE</h2>
+                <p id="ipexterno">IP EXTERNO:</p>
+                <p id="ipinterno">IP INTERNO:</p>
+              </div>
+            </div>
+            <div class="informa-porta">
+              Porta:
+              <div class="wrapper">
+                <div class="minecraft-input">
+                  <input type="text" id="input-porta">
+                </div>
+              </div>
+            </div>
+            <div class="mc-button full">
+              <div class="title" onclick="abrir_porta()">Abrir Porta</div>
+            </div>
+            <table id="PortsTable" style="display:none;">
+              <caption>Portas abertas</caption>
+              <thead>
+                <tr>
+                  <th>Porta</th>
+                  <th>Protocolo</th>
+                  <th>Acoes</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </center>
+        </div>
+      </div>
+  </body>
+  <script src="render.js"> </script>
+</html>

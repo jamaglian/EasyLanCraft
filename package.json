@@ -1,0 +1,32 @@
+{
+
+  "name": "easylancraft",
+  "version": "1.0.0",
+  "description": "Substituir VPN para minecraft",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . EasyLanCraft --overwrite --asar=true --platform=win32 --arch=ia32 --icon=icon.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"EasyLanCraft\"",
+    "package-linux": "electron-packager . EasyLanCraft --overwrite --asar=true --platform=linux --arch=x64 --icon=icon.png --prune=true --out=release-builds"
+  },
+  "author": "Joao A @jamaglian",
+  "copyright": "Copyright © 2022 ${author}",
+  "license": "MIT",
+  "mac": {
+    "icon": "./icon.icns",
+    "category": "public.app-category.utilities"
+  },
+  "win": {
+    "icon": "./icon.png"
+  },
+  "devDependencies": {
+    "electron": "^18.0.0",
+    "electron-packager": "^15.4.0"
+  },
+  "dependencies": {
+    "jQuery": "^1.7.4",
+    "nat-upnp": "^1.1.1"
+  }
+}
